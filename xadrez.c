@@ -10,6 +10,8 @@ int main() {
   const int mov_tower = 5;
   const int mov_bisshop = 5;
   const int mov_queen = 8;
+  const int mov_horse_vertical = 2;
+  const int mov_horse_horizontal = 1;
 
   int _count = 0;
   printf("Torre:\n");
@@ -30,6 +32,19 @@ int main() {
     printf("Esquerda\n");
     count_queen++;
   } while (count_queen < mov_queen);
+
+  printf("\nCavalo\n");
+  for (int i = 0; i < mov_horse_horizontal; i++) {
+    int j = 0;
+    while (j < mov_horse_vertical + mov_horse_horizontal) {
+      if (j < mov_horse_vertical) {
+        printf("Baixo\n");
+      } else {
+        printf("Esquerda\n");
+      }
+      j++;
+    }
+  }
   // Nível Novato - Movimentação das Peças
   //
   // Sugestão: Declare variáveis constantes para representar o número de casas
